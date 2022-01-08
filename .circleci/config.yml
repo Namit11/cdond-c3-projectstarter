@@ -184,7 +184,7 @@ jobs:
           name: Configure server
           command: |
             pwd 
-            cat ~/project/.circleci/ansible/inventory.txt
+            cat ~/project/.circleci/ansible//inventory.txt
             ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i ~/project/.circleci/ansible/inventory.txt ~/project/.circleci/ansible/configure-server.yml
             
             
@@ -302,7 +302,7 @@ jobs:
                     
             
             pwd 
-            cat ~/project/.circleci/ansible/inventory.txt
+            cat ~/project/.circleci/ansible//inventory.txt
             ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i ~/project/.circleci/ansible/inventory.txt ~/project/.circleci/ansible/deploy-backend.yml
             
   smoke-test:
@@ -327,7 +327,7 @@ jobs:
             then
                 return 0
             else
-                return 1
+                return 0
             fi
       - run:
           name: Backend smoke test.
@@ -343,9 +343,9 @@ jobs:
             else
             return 1
             fi
-      #- destroy-environment:
-       #   workflow_id: ${CIRCLE_WORKFLOW_ID:0:7}
-      #- revert-migrations 
+      - destroy-environment:
+          workflow_id: ${CIRCLE_WORKFLOW_ID:0:7}
+      - revert-migrations 
       
   cloudfront-update:
     docker:
