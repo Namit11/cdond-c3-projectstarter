@@ -1,2 +1,2 @@
 URL01:- https://github.com/Namit11/cdond-c3-projectstarter
-URL02:- http://udapeople-10d2b7e.s3-website-us-east-1.amazonaws.com/#/employees
+URL02:- http://udapeople-2f28492.s3-website-us-east-1.amazonaws.com/#/employees
