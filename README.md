@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/Namit11/cdond-c3-projectstarter/tree/pre-deploy.svg?style=svg)](https://circleci.com/gh/Namit11/cdond-c3-projectstarter/tree/pre-deploy)
 ## Give your Application Auto-Deploy Superpowers
 
 In this project, you will prove your mastery of the following learning objectives:
